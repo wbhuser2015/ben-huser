@@ -6,14 +6,18 @@
 
 body {
     font-family: Georgia, serif;
+    background: #f5f3ef;
+    color: #222;
 }
+
+/* Header / Navigation */
 
 header {
     position: fixed;
     top: 0;
     width: 100%;
     padding: 20px 50px;
-    background: rgba(0,0,0,.75);
+    background: rgba(0, 0, 0, 0.75);
 
     display: flex;
     justify-content: space-between;
@@ -39,13 +43,15 @@ nav a:hover {
     color: #d6c7a1;
 }
 
+/* Homepage Hero */
+
 .hero {
     min-height: 100vh;
 
     background:
         linear-gradient(
-            rgba(0,0,0,.45),
-            rgba(0,0,0,.45)
+            rgba(0, 0, 0, 0.45),
+            rgba(0, 0, 0, 0.45)
         ),
         url("images/mountains.jpg");
 
@@ -57,10 +63,9 @@ nav a:hover {
     align-items: center;
 
     text-align: center;
-
     color: white;
 
-    padding: 20px;
+    padding: 120px 20px 40px;
 }
 
 .hero-content {
@@ -71,20 +76,19 @@ nav a:hover {
     width: 220px;
     height: 220px;
 
-    border-radius: 55%;
+    border-radius: 50%;
     object-fit: cover;
-
-    /* shifts the visible crop slightly right */
-    object-position: 20% center;
+    object-position: 40% center;
 
     border: 4px solid white;
 
-    /* helps with rendering sharpness */
+    margin-bottom: 30px;
+
     transform: translateZ(0);
     backface-visibility: hidden;
 }
 
-h1 {
+.hero h1 {
     font-size: 4rem;
     margin-bottom: 10px;
 }
@@ -109,19 +113,149 @@ h1 {
     display: inline-block;
 
     padding: 12px 24px;
-
     margin: 10px;
 
     background: white;
     color: #333;
 
     text-decoration: none;
-
     border-radius: 5px;
-
     font-weight: bold;
 }
 
 .btn:hover {
     background: #d6c7a1;
+}
+
+/* Interior Portfolio Pages */
+
+.page-content {
+    max-width: 1000px;
+    margin: 120px auto 60px;
+    padding: 0 24px;
+}
+
+.page-header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.page-header h1 {
+    color: #003366;
+    font-size: 3rem;
+    margin-bottom: 10px;
+}
+
+.page-header p {
+    color: #555;
+    font-size: 1.2rem;
+    line-height: 1.7;
+}
+
+.card {
+    background: white;
+
+    padding: 32px;
+    margin-bottom: 30px;
+
+    border-radius: 12px;
+
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+
+    border-top: 5px solid #d6c7a1;
+}
+
+.card h2 {
+    color: #003366;
+
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+
+    border-bottom: 2px solid #eee;
+}
+
+.card h3 {
+    color: #003366;
+
+    margin-top: 25px;
+    margin-bottom: 10px;
+}
+
+.card p,
+.card li {
+    line-height: 1.8;
+    color: #333;
+    font-size: 1.05rem;
+}
+
+.card ul {
+    padding-left: 25px;
+}
+
+.placeholder {
+    background: #f8f8f8;
+
+    border-left: 4px solid #d6c7a1;
+
+    padding: 15px;
+    margin-top: 10px;
+
+    font-style: italic;
+    color: #666;
+}
+
+/* Footer */
+
+footer {
+    text-align: center;
+
+    padding: 40px;
+
+    color: #777;
+
+    font-size: 0.9rem;
+}
+
+/* Mobile */
+
+@media (max-width: 800px) {
+    header {
+        padding: 18px 24px;
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    nav {
+        text-align: center;
+    }
+
+    nav a {
+        display: inline-block;
+        margin: 6px 10px;
+    }
+
+    .hero h1 {
+        font-size: 3rem;
+    }
+
+    .bio {
+        font-size: 1.05rem;
+    }
+
+    .profile-pic {
+        width: 190px;
+        height: 190px;
+    }
+
+    .page-content {
+        margin-top: 170px;
+    }
+
+    .page-header h1 {
+        font-size: 2.4rem;
+    }
+
+    .card {
+        padding: 24px;
+    }
 }
