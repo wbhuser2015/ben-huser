@@ -1,11 +1,12 @@
 const navItems = [
     { href: "index.html", label: "Home" },
+    { href: "beliefs.html", label: "Beliefs" },
+    { href: "degree-distinctives.html", label: "Education" },
+    { href: "resume.html", label: "Resume" },
     { href: "christian-ministry.html", label: "Ministry" },
     { href: "communication.html", label: "Communication" },
-    { href: "cultural-engagement.html", label: "Culture" },
-    { href: "degree-distinctives.html", label: "Degree" },
-    { href: "beliefs.html", label: "Beliefs" },
-    { href: "resume.html", label: "Resume" }
+    { href: "cultural-engagement.html", label: "Culture" }
+    
 ];
 
 const currentPage = window.location.pathname.split("/").pop() || "index.html";
