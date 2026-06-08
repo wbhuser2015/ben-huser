@@ -10,18 +10,33 @@ body {
     color: #222;
 }
 
+a {
+    color: #003366;
+    text-decoration-color: rgba(0, 51, 102, 0.35);
+    text-underline-offset: 4px;
+}
+
+a:hover,
+a:focus-visible {
+    color: #7b5f1e;
+    text-decoration-color: currentColor;
+}
+
 /* Header / Navigation */
 
 header {
     position: fixed;
     top: 0;
+    left: 0;
     width: 100%;
-    padding: 20px 50px;
-    background: rgba(0, 0, 0, 0.75);
+    padding: 18px 50px;
+    background: rgba(19, 24, 29, 0.88);
+    backdrop-filter: blur(8px);
 
     display: flex;
     justify-content: space-between;
     align-items: center;
+    gap: 28px;
 
     z-index: 1000;
 }
@@ -30,16 +45,31 @@ header {
     color: white;
     font-size: 1.8rem;
     font-weight: bold;
+    text-decoration: none;
+    white-space: nowrap;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    gap: 8px 10px;
 }
 
 nav a {
     color: white;
     text-decoration: none;
-    margin-left: 25px;
     font-size: 1rem;
+    padding: 8px 10px;
+    border-radius: 4px;
+    transition: background 160ms ease, color 160ms ease;
 }
 
-nav a:hover {
+nav a:hover,
+nav a:focus-visible,
+nav a.active {
+    background: rgba(255, 255, 255, 0.12);
     color: #d6c7a1;
 }
 
@@ -93,11 +123,6 @@ nav a:hover {
     margin-bottom: 10px;
 }
 
-.subtitle {
-    font-size: 1.3rem;
-    margin-bottom: 25px;
-}
-
 .bio {
     font-size: 1.25rem;
     line-height: 1.8;
@@ -131,7 +156,7 @@ nav a:hover {
 
 .page-content {
     max-width: 1000px;
-    margin: 120px auto 60px;
+    margin: 122px auto 60px;
     padding: 0 24px;
 }
 
@@ -155,12 +180,12 @@ nav a:hover {
 .card {
     background: white;
 
-    padding: 32px;
+    padding: 30px;
     margin-bottom: 30px;
 
-    border-radius: 12px;
+    border-radius: 8px;
 
-    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+    box-shadow: 0 6px 22px rgba(0, 0, 0, 0.07);
 
     border-top: 5px solid #d6c7a1;
 }
@@ -201,6 +226,19 @@ nav a:hover {
     padding-left: 25px;
 }
 
+.artifact-list {
+    display: grid;
+    gap: 10px;
+    list-style: none;
+    padding-left: 0;
+}
+
+.artifact-list li {
+    border-left: 3px solid #d6c7a1;
+    background: #faf9f6;
+    padding: 10px 14px;
+}
+
 .placeholder {
     background: #f8f8f8;
 
@@ -229,18 +267,24 @@ footer {
 
 @media (max-width: 800px) {
     header {
-        padding: 18px 24px;
+        position: static;
+        padding: 18px 24px 16px;
         flex-direction: column;
         gap: 12px;
     }
 
     nav {
-        text-align: center;
+        justify-content: center;
     }
 
     nav a {
-        display: inline-block;
-        margin: 6px 10px;
+        font-size: 0.98rem;
+        padding: 7px 9px;
+    }
+
+    .hero {
+        min-height: auto;
+        padding-top: 48px;
     }
 
     .hero h1 {
@@ -257,7 +301,7 @@ footer {
     }
 
     .page-content {
-        margin-top: 170px;
+        margin-top: 38px;
     }
 
     .page-header h1 {
