@@ -5,8 +5,8 @@ const navItems = [
     { href: "resume.html", label: "Resume" },
     { href: "christian-ministry.html", label: "Ministry" },
     { href: "communication.html", label: "Communication" },
-    { href: "cultural-engagement.html", label: "Culture" }
-    
+    { href: "cultural-engagement.html", label: "Culture" },
+    { href: "resources.html", label: "Resources" },
 ];
 
 const currentPage = window.location.pathname.split("/").pop() || "index.html";
