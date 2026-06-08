@@ -181,6 +181,15 @@ nav a:hover {
     margin-bottom: 10px;
 }
 
+.card h4 {
+    color: #333;
+
+    margin-top: 22px;
+    margin-bottom: 6px;
+
+    font-size: 1.1rem;
+}
+
 .card p,
 .card li {
     line-height: 1.8;
