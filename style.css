@@ -239,6 +239,23 @@ nav a.active {
     padding: 10px 14px;
 }
 
+.belief-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 18px;
+}
+
+.belief-item {
+    border: 1px solid #ece5d6;
+    border-radius: 8px;
+    background: #fbfaf7;
+    padding: 18px;
+}
+
+.belief-item h3 {
+    margin-top: 0;
+}
+
 .placeholder {
     background: #f8f8f8;
 
@@ -310,5 +327,9 @@ footer {
 
     .card {
         padding: 24px;
+    }
+
+    .belief-grid {
+        grid-template-columns: 1fr;
     }
 }

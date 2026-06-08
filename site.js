@@ -4,6 +4,7 @@ const navItems = [
     { href: "communication.html", label: "Communication" },
     { href: "cultural-engagement.html", label: "Culture" },
     { href: "degree-distinctives.html", label: "Degree" },
+    { href: "beliefs.html", label: "Beliefs" },
     { href: "resume.html", label: "Resume" }
 ];
 
